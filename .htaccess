@@ -1,0 +1,10 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+Allow from all
+</Files>
+Options -Indexes
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.yuki\.890m\.com)(:80)? [NC]
+RewriteRule ^(.*) http://yuki.890m.com/$1 [R=301,L]
+DirectoryIndex index.php
+order deny,allow
+
